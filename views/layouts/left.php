@@ -7,11 +7,13 @@
             <div class="pull-left image">
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
+            <?php if( ! \Yii::$app->user->isGuest): ?>
             <div class="pull-left info">
                 <p><?=\Yii::$app->user->identity->username?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
+            <?php endif; ?>
         </div>
 
         <!-- search form -->
