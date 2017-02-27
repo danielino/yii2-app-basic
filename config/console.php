@@ -20,16 +20,12 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
+        'mongodb' => $db,
     ],
     'params' => $params,
-    /*
     'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
-        ],
+        'mongodb-migrate' => 'yii\mongodb\console\controllers\MigrateController'
     ],
-    */
 ];
 
 if (YII_ENV_DEV) {

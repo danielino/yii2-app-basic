@@ -12,17 +12,37 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2-apidoc": "~2.1.0",
+        "yiisoft/yii2-jui": "^2.0",
+        "yiisoft/yii2-imagine": "*",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-mongodb": "~2.1.0",
+        "rmrevin/yii2-fontawesome": "~2.17",
+        "kartik-v/yii2-nav-x": "dev-master",
+        "kartik-v/yii2-dropdown-x": "dev-master",
+        "kartik-v/yii2-icons": "@stable",
+        "kartik-v/yii2-widget-depdrop": "^1.0",
+        "kartik-v/yii2-popover-x": "dev-master",
+        "miloschuman/yii2-highcharts-widget": "*",
+        "mongosoft/yii2-mongodate-behavior": "*",
+        "fedemotta/yii2-widget-datatables": "*",
+        "bower-asset/jquery": "2.2.*@stable",
+        "bower-asset/jquery-ui": "~1.11@stable",
+        "dmstr/yii2-adminlte-asset": "2.*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0",
         "yiisoft/yii2-faker": "~2.0.0",
+        "kartik-v/yii2-icons": "@dev",
+        "kartik-v/yii2-tree-manager": "@dev",
+        "kartik-v/yii2-detail-view": "@dev",
+        "kartik-v/yii2-editable": "@dev",
 
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1",
@@ -38,13 +58,11 @@
     },
     "extra": {
         "yii\\composer\\Installer::postCreateProject": {
-            "setPermission": [
-                {
-                    "runtime": "0777",
-                    "web/assets": "0777",
-                    "yii": "0755"
-                }
-            ],
+            "setPermission": [{
+                "runtime": "0777",
+                "web/assets": "0777",
+                "yii": "0755"
+            }],
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
