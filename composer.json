@@ -33,7 +33,8 @@
         "fedemotta/yii2-widget-datatables": "*",
         "bower-asset/jquery": "2.2.*@stable",
         "bower-asset/jquery-ui": "~1.11@stable",
-        "dmstr/yii2-adminlte-asset": "2.*"
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "johnitvn/yii2-ajaxcrud": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
