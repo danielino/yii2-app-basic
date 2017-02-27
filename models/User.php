@@ -1,12 +1,11 @@
 <?php
-namespace common\models;
+namespace app\models;
 
 use Yii;
 use yii\base\NotSupportedException;
 use yii\mongodb\ActiveRecord;
 use yii\base\Security;
 use yii\web\IdentityInterface;
-use common\models\Organizzazione;
 
 /**
  * User model
@@ -53,16 +52,6 @@ class User extends ActiveRecord implements IdentityInterface
          return [
              ['status', 'default', 'value' => self::STATUS_ACTIVE],
              ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
-
-             ['role', 'default', 'value' => self::ROLE_USER],
-             ['role', 'in', 'range' => [
-                 self::ROLE_USER, self::ROLE_CUSTOMER_ADMIN, self::ROLE_CUSTOMER_USER,
-                 self::ROLE_ORG_USER, self::ROLE_ORG_ADMIN,
-                 self::ROLE_STAFF, self::ROLE_ADMIN, self::ROLE_GOD, self::ROLE_SUPERADMIN
-                ]
-             ],
-             
-            ],
          ];
      }
      

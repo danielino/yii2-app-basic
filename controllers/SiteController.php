@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
+use app\models\RegisterUserForm;
 use app\models\ContactForm;
 
 class SiteController extends Controller
@@ -94,6 +95,24 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
+    public function actionSignup()
+    {
+        $model = new RegisterUserForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+
+
 
     /**
      * Displays contact page.
