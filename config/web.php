@@ -47,11 +47,14 @@ $config = [
             'rules' => [
             ],
         ],
+        
+    ],
+    'params' => $params,
+    'modules' => [
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
         ],
     ],
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
@@ -68,6 +71,11 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         'allowedIPs' => ['*'],
+        'generators' => [
+            'mongoDbModel' => [
+                'class' => 'yii\mongodb\gii\model\Generator'
+            ]
+        ],
     ];
 }
 
