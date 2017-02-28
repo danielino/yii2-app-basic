@@ -1,5 +1,6 @@
 <?php
-namespace api\controllers;
+
+namespace app\modules\api\controllers;
 
 use yii\rest\Controller;
 use yii\filters\auth\CompositeAuth;
@@ -7,8 +8,11 @@ use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
 
+/**
+ * Default controller for the `api` module
+ */
 
-class BaseController extends Controller
+class DefaultController extends Controller
 {
     
     public function behaviors()
